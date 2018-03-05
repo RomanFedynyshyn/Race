@@ -1,23 +1,21 @@
 import java.util.Random;
 
 public class Car {
+    Random random = new Random();
+
     public int speed;
 
-    Random random = new Random();
-    public int arr[] = new int[20];
-    public String name_car;
-  //  int total = totalSpeed();
+    public int arr[] = new int[Runner.raceDuration];
 
     Car() {
 
         speed = random.nextInt(100);
         arr[0] = speed;
-        name_car = random.toString();
     }
 
     public void setSpeed() {
         this.speed = random.nextInt(100);
-        ;
+
     }
 
     public int getSpeed() {
