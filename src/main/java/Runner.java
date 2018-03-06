@@ -7,7 +7,9 @@ public class Runner {
 
         RaceStart.raceStarter();
         Thread.sleep(20000);
-        Judge.some();
-
+        Judge.top3Finding();
+       // Judge.matrixBuilder();
+        Judge.outpoot();
+        Judge.top3Finding();
     }
 }

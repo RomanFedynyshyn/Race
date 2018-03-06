@@ -1,3 +1,6 @@
+import java.util.concurrent.BrokenBarrierException;
+import java.util.concurrent.CyclicBarrier;
+
 public class RaceStart extends Thread {
 
     @Override
@@ -13,17 +16,23 @@ public class RaceStart extends Thread {
             car.setSpeed();
             car.arr[i] = car.getSpeed();
             System.out.println(car.getSpeed());
+
         }
         Judge.LeaderTable.put(Thread.currentThread().getName(), car);
     }
 
 
-    public static void raceStarter() {
+    public static void raceStarter(){
 
         for (int i = 0; i < Runner.carsNumber; i++) {
             new RaceStart().start();
 
+
         }
+
+
+
+
     }
 
 
